@@ -1,70 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: antiquewhite;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
+    background: linear-gradient(135deg, #f5eadc, #fffaf3);
+    color: #3d342b;
+    line-height: 1.7;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    padding: 30px 15px;
 }
 
 .bio-container {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    width: 100%;
+    max-width: 850px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(90, 70, 50, 0.18);
+    border: 1px solid #eadcc9;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #e8d6bf, #f8efe4);
     text-align: center;
-    margin: 20px;
+    padding: 45px 25px 35px;
+    border-bottom: 1px solid #eadcc9;
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 155px;
+    height: 155px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #6c63ff;
-    margin-bottom: 20px;
+    border: 6px solid #ffffff;
+    box-shadow: 0 8px 22px rgba(80, 60, 40, 0.25);
+    margin-bottom: 18px;
 }
 
-/* Typography */
 h1 {
-    margin: 10px 0;
-    color: #2c3e50;
+    font-size: 2.4rem;
+    color: #4a3526;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
 }
 
 .tagline {
+    font-size: 1rem;
+    color: #7a6652;
     font-style: italic;
-    color: #7f8c8d;
-    margin-bottom: 30px;
+}
+
+.content-section {
+    padding: 35px 50px;
+}
+
+.content-section:not(:last-child) {
+    border-bottom: 1px solid #f0e4d6;
 }
 
 h2 {
-    border-bottom: 2px solid #6c63ff;
+    font-size: 1.6rem;
+    color: #5b3f2b;
+    margin-bottom: 20px;
+    position: relative;
     display: inline-block;
-    padding-bottom: 5px;
-    margin-top: 30px;
 }
 
-/* Links and Lists */
+h2::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 3px;
+    background-color: #c8a97e;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+p {
+    font-size: 1rem;
+    color: #4c4035;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
 .contact-list {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .contact-list a {
+    display: inline-block;
     text-decoration: none;
-    color: #6c63ff;
-    font-weight: bold;
-    transition: opacity 0.3s;
+    background-color: #f3e5d3;
+    color: #5b3f2b;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #d9c2a6;
+    transition: all 0.3s ease;
 }
 
 .contact-list a:hover {
-    opacity: 0.7;
-    text-decoration: underline;
+    background-color: #c8a97e;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(100, 75, 45, 0.2);
+}
+
+@media (max-width: 600px) {
+    .content-section {
+        padding: 28px 24px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .contact-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-list a {
+        width: 180px;
+        text-align: center;
+    }
 }
