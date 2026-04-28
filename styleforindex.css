@@ -117,6 +117,28 @@ p {
     box-shadow: 0 6px 15px rgba(100, 75, 45, 0.2);
 }
 
+.music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f3e5d3;
+    color: #5b3f2b;
+    border: 1px solid #d9c2a6;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(100, 75, 45, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.music-btn:hover {
+    background-color: #c8a97e;
+    color: white;
+    transform: translateY(-2px);
+}
+
 @media (max-width: 600px) {
     .content-section {
         padding: 28px 24px;
@@ -143,5 +165,12 @@ p {
     .contact-list a {
         width: 180px;
         text-align: center;
+    }
+
+    .music-btn {
+        top: 12px;
+        right: 12px;
+        padding: 10px 14px;
+        font-size: 0.85rem;
     }
 }
